@@ -18,6 +18,7 @@ namespace Users.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {

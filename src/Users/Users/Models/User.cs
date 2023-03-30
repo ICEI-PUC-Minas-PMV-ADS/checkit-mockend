@@ -24,7 +24,7 @@ namespace Users.Models
     {
         [Display(Name = "User")]
         User,
-        [Display(Name = "Manager")]
-        Manager
+        [Display(Name = "Admin")]
+        Admin
     }
 }
