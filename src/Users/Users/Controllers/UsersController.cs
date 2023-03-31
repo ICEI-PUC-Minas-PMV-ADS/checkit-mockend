@@ -94,6 +94,7 @@ namespace Users.Controllers
         public async Task<ActionResult> Authenticate(AuthenticateDto model)
         {
             var modelDb = await _context.Users.FindAsync(model.Id);
+            // Será alterado para model.Email
 
             if (modelDb == null || !BCrypt.Net.BCrypt.Verify(model.Password, modelDb.Password))
             {
