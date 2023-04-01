@@ -7,8 +7,8 @@ using Users.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers()
-     // Não retorna password na response
+// No returned password in response
+builder.Services.AddControllers()     
      .AddJsonOptions(j => j.JsonSerializerOptions.ReferenceHandler =
      ReferenceHandler.IgnoreCycles);
 

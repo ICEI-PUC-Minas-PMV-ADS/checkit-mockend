@@ -11,9 +11,7 @@ namespace Users.Services
         public UserService(IOptions<UserDatabaseSettings> UserDatabaseSettings)
         {
             var mongoClient = new MongoClient(UserDatabaseSettings.Value.ConnectionString);
-
             var mongoDatabase = mongoClient.GetDatabase(UserDatabaseSettings.Value.DatabaseName);
-
             _usersCollection = mongoDatabase.GetCollection<User>(UserDatabaseSettings.Value.UsersCollectionName);
         }
 
