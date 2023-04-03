@@ -54,6 +54,7 @@ namespace ProjectManager.Controllers
         public async Task<IActionResult> Update([FromRoute] string id, [FromBody] RegisterOrUpdateProjectRequest request)
         {
             var input = new Project(request);
+            input.Id = id;
 
             await _projectService.Update(id, input);
 
