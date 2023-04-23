@@ -1,0 +1,981 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v2023.1.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 6.917999999999999,
+				"request": {
+					"method": "POST",
+					"url": "https://localhost:7246/api/Tarefas",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"links\": [\n    {\n      \"id\": \"string\",\n      \"href\": \"string\",\n      \"rel\": \"string\",\n      \"metodo\": \"string\"\n    }\n  ],\n  \"projectId\": \"string\",\n  \"tituloTarefa\": \"Tarefa 1\",\n  \"descricao\": \"Teste\",\n  \"dataInicio\": \"2023-04-23T18:18:20.483Z\",\n  \"dataVencimento\": \"2023-04-23T18:18:20.483Z\",\n  \"prioridade\": 0\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:37:23 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						},
+						{
+							"name": "location",
+							"value": "https://localhost:7246/api/Tarefas/64457ae4a5426d0656aba276"
+						}
+					],
+					"content": {
+						"size": 274,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457ae4a5426d0656aba276\",\"projectId\":\"string\",\"tituloTarefa\":\"Tarefa 1\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:18:20.483Z\",\"dataVencimento\":\"2023-04-23T18:18:20.483Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 6.917999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST api/Tarefas"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 698.264,
+				"request": {
+					"method": "POST",
+					"url": "https://localhost:7295/api/Users",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"role\": 0\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:55:36 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						},
+						{
+							"name": "location",
+							"value": "https://localhost:7295/api/Users/64457f28e2220fcaadff42a3"
+						}
+					],
+					"content": {
+						"size": 75,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457f28e2220fcaadff42a3\",\"name\":\"string\",\"email\":\"string\",\"role\":0}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 698.264,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST api/Users"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 680.1859999999999,
+				"request": {
+					"method": "POST",
+					"url": "https://localhost:7295/api/Users/authenticate",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"password\": \"string\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:55:53 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 234,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"jwtToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2NDQ1N2MzYWUyMjIwZmNhYWRmZjQyOTYiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2ODIyNzYxNTMsImV4cCI6MTY4MjMwNDk1MywiaWF0IjoxNjgyMjc2MTUzfQ.EDoRASYVUVrpRVHihduGMyohqdNsu53iEI9r96MmopQ\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 680.1859999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST api/Users/Authenticate"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 7.361000000000001,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7246/api/Tarefas",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:09:34 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 1408,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":\"64457799a5426d0656aba272\",\"projectId\":\"string\",\"tituloTarefa\":\"Tarefa 1\",\"descricao\":\"string\",\"dataInicio\":\"2023-04-23T18:18:20.483Z\",\"dataVencimento\":\"2023-04-23T18:18:20.483Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]},{\"id\":\"64457a2ea5426d0656aba273\",\"projectId\":\"string\",\"tituloTarefa\":\"string\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]},{\"id\":\"64457adea5426d0656aba274\",\"projectId\":\"string\",\"tituloTarefa\":\"Tarefa 1\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:18:20.483Z\",\"dataVencimento\":\"2023-04-23T18:18:20.483Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]},{\"id\":\"64457ae1a5426d0656aba275\",\"projectId\":\"64457b52ee1ce1fa38f16277\",\"tituloTarefa\":\"Tarefa1\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]},{\"id\":\"64457ae4a5426d0656aba276\",\"projectId\":\"64457b52ee1ce1fa38f16277\",\"tituloTarefa\":\"string\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 7.361000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Tarefas"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 5.164000000000001,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7295/api/Users",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2NDQ1N2MzYWUyMjIwZmNhYWRmZjQyOTYiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2ODIyNzYxNTMsImV4cCI6MTY4MjMwNDk1MywiaWF0IjoxNjgyMjc2MTUzfQ.EDoRASYVUVrpRVHihduGMyohqdNsu53iEI9r96MmopQ"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:01:56 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 910,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":\"64457c3ae2220fcaadff4296\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457c70e2220fcaadff4297\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457c7ee2220fcaadff4298\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457c80e2220fcaadff4299\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457cb8e2220fcaadff429a\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457cbbe2220fcaadff429b\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457cbee2220fcaadff429c\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457d09e2220fcaadff429d\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457d9ee2220fcaadff429f\",\"name\":\"Ana\",\"email\":\"string\",\"role\":0},{\"id\":\"64457e10e2220fcaadff42a0\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457e25e2220fcaadff42a1\",\"name\":\"string\",\"email\":\"string\",\"role\":0},{\"id\":\"64457f28e2220fcaadff42a3\",\"name\":\"string\",\"email\":\"string\",\"role\":0}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 5.164000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Users"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 366.656,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7246/api/Tarefas/64457ae4a5426d0656aba276",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:05:33 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 690,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457ae4a5426d0656aba276\",\"projectId\":\"64457b52ee1ce1fa38f16277\",\"tituloTarefa\":\"string\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"},{\"id\":\"64457ae4a5426d0656aba276\",\"href\":\"https://localhost:7246/api/Tarefas/64457ae4a5426d0656aba276\",\"rel\":\"self\",\"metodo\":\"GET\"},{\"id\":\"64457ae4a5426d0656aba276\",\"href\":\"https://localhost:7246/api/Tarefas/64457ae4a5426d0656aba276\",\"rel\":\"update\",\"metodo\":\"PUT\"},{\"id\":\"64457ae4a5426d0656aba276\",\"href\":\"https://localhost:7246/api/Tarefas/64457ae4a5426d0656aba276\",\"rel\":\"delete\",\"metodo\":\"Delete\"}]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 366.656,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Tarefas/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 7.531000000000001,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7246/api/Tarefas/getTaskProject/64457b52ee1ce1fa38f16277",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:09:47 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 584,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "[{\"id\":\"64457ae1a5426d0656aba275\",\"projectId\":\"64457b52ee1ce1fa38f16277\",\"tituloTarefa\":\"Tarefa1\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]},{\"id\":\"64457ae4a5426d0656aba276\",\"projectId\":\"64457b52ee1ce1fa38f16277\",\"tituloTarefa\":\"string\",\"descricao\":\"Teste\",\"dataInicio\":\"2023-04-23T18:34:40.486Z\",\"dataVencimento\":\"2023-04-23T18:34:40.486Z\",\"prioridade\":0,\"links\":[{\"id\":\"string\",\"href\":\"string\",\"rel\":\"string\",\"metodo\":\"string\"}]}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 7.531000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Tarefas/getTaskProject/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 353.214,
+				"request": {
+					"method": "PUT",
+					"url": "https://localhost:7246/api/Tarefas/64457ae1a5426d0656aba275",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"links\": [\n    {\n      \"id\": \"string\",\n      \"href\": \"string\",\n      \"rel\": \"string\",\n      \"metodo\": \"string\"\n    }\n  ],\n  \"id\": \"64457ae1a5426d0656aba275\",\n  \"projectId\": \"64457b52ee1ce1fa38f16277\",\n  \"tituloTarefa\": \"Tarefa1\",\n  \"descricao\": \"Teste\",\n  \"dataInicio\": \"2023-04-23T18:34:40.486Z\",\n  \"dataVencimento\": \"2023-04-23T18:34:40.486Z\",\n  \"prioridade\": 0\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:09:29 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 353.214,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "PUT api/Tarefas/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "https://localhost:7152/api/Projects/6445653dee1ce1fa38f16276",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE api/Tarefas/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 19.031,
+				"request": {
+					"method": "POST",
+					"url": "https://localhost:7152/api/Projects",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"title\": \"string\",\n  \"createdBy\": \"string\",\n  \"updatedBy\": \"string\",\n  \"dueDate\": \"2023-04-23T16:57:10.420Z\",\n  \"member\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"password\": \"string\"\n    }\n  ],\n  \"status\": \"string\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:39:14 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						},
+						{
+							"name": "location",
+							"value": "https://localhost:7152/api/Projects/64457b52ee1ce1fa38f16277"
+						}
+					],
+					"content": {
+						"size": 305,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457b52ee1ce1fa38f16277\",\"title\":\"string\",\"createdAt\":\"2023-04-23T15:39:14.831317-03:00\",\"createdBy\":\"string\",\"updatedAt\":\"2023-04-23T15:39:14.8313386-03:00\",\"updatedBy\":\"string\",\"status\":\"string\",\"dueDate\":\"2023-04-23T16:57:10.42Z\",\"members\":[{\"id\":\"string\",\"name\":\"string\",\"password\":\"string\"}]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 19.031,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST api/Projects"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 10.857000000000001,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7152/api/Projects/64457b52ee1ce1fa38f16277",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:39:33 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 288,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457b52ee1ce1fa38f16277\",\"title\":\"string\",\"createdAt\":\"2023-04-23T18:39:14.831Z\",\"createdBy\":\"string\",\"updatedAt\":\"2023-04-23T18:39:14.831Z\",\"updatedBy\":\"string\",\"status\":\"string\",\"dueDate\":\"2023-04-23T16:57:10.42Z\",\"members\":[{\"id\":\"string\",\"name\":\"string\",\"password\":\"string\"}]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 10.857000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Projects/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 12.427999999999999,
+				"request": {
+					"method": "PUT",
+					"url": "https://localhost:7152/api/Projects/64457b52ee1ce1fa38f16277",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"title\": \"Mudando o titulo\",\n  \"createdBy\": \"string\",\n  \"updatedBy\": \"string\",\n  \"dueDate\": \"2023-04-23T16:57:10.420Z\",\n  \"member\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"password\": \"string\"\n    }\n  ],\n  \"status\": \"string\"\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:39:44 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						},
+						{
+							"name": "content-length",
+							"value": "0"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 12.427999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "PUT api/Projects/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 51.341,
+				"request": {
+					"method": "DELETE",
+					"url": "https://localhost:7152/api/Projects/6445653dee1ce1fa38f16276",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 17:07:28 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						},
+						{
+							"name": "content-length",
+							"value": "0"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 51.341,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE api/Projects/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 11.446,
+				"request": {
+					"method": "GET",
+					"url": "https://localhost:7295/api/Users/64457d40e2220fcaadff429e",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 18:47:53 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 75,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"id\":\"64457d40e2220fcaadff429e\",\"name\":\"string\",\"email\":\"string\",\"role\":0}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 11.446,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET api/Users/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 726.289,
+				"request": {
+					"method": "PUT",
+					"url": "https://localhost:7295/api/Users/64457d9ee2220fcaadff429f",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"id\": \"64457d9ee2220fcaadff429f\",\n  \"name\": \"Ana\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"role\": 0\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:01:46 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 726.289,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "PUT api/Users/{id}"
+			},
+			{
+				"startedDateTime": "2023-04-23T23:21:20.705Z",
+				"time": 9.511000000000001,
+				"request": {
+					"method": "DELETE",
+					"url": "https://localhost:7295/api/Users/64457ed8e2220fcaadff42a2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Sun, 23 Apr 2023 19:00:06 GMT"
+						},
+						{
+							"name": "server",
+							"value": "Kestrel"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 9.511000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE api/Users/{id}"
+			}
+		]
+	}
+}
