@@ -13,8 +13,16 @@ formPostAuth.addEventListener("submit", (event) => {
   };
 
   // console.log(objUserAuth)
-
   postUserAuth(objUserAuth);
+});
+
+// LOGOUT
+const logout = document.querySelector("#logout");
+
+logout.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  removeTokenAndLogout();
 });
 
 // POST
@@ -104,9 +112,13 @@ function validateToken() {
   return token;
 }
 
-//---------------------------------------------------------------
-// https://localhost:5278/api/users/
+// LOGOUT---------------------------------------------------------
+function removeTokenAndLogout() {
+  localStorage.removeItem("jwtToken");
+}
 
+// REQUESTS ------------------------------------------------------
+// https://localhost:5278/api/users/
 // POST AUTH
 const postUserAuth = async (param) => {
   //console.log('param: ' + JSON.stringify(param));
