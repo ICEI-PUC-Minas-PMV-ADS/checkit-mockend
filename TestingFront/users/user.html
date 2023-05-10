@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .all {
+      display: flex;
+      flex-flow: column;
+      width: 300px;
+      margin-top: 40px;
+      border: solid 2px black;
+      padding: 10px;
+    }
+  </style>
+  <title>User</title>
+</head>
+
+<body>  
+  <!--POST AUTH-->
+  <h3>USER</h3>
+  <form action="" class="all" id="form-post-auth">    
+   
+    <label for="text">Email</label>
+    <input type="email" id="email" value="paulof@bestmail.com">
+
+    <label for="text">Password</label>
+    <input type="text" id="password" value="123456">
+
+    <button type="submit">Post Authenticate</button>
+  </form>
+
+  <!--POST--> 
+  <form action="" class="all" id="form-post">    
+    <label for="text">Name</label>
+    <input type="text" id="name" value="Paulo Freitas">
+
+    <label for="text">Email</label>
+    <input type="email" id="email" value="paulof@bestmail.com">
+
+    <label for="text">Password</label>
+    <input type="text" id="password" value="123456">
+<!-- 
+    <label for="text">Role 0 or 1</label>
+    <input type="number" id="role" value=""> -->
+
+    <button type="submit">Post User</button>
+  </form>
+
+  <!--PUT-->
+  <form action="" class="all" id="form-put">    
+    <label for="text">Id</label>
+    <input type="text" id="id" value="6428343c6e54e1eab8e40485">
+
+    <label for="text">Name</label>
+    <input type="text" id="name" value="Carmen">
+
+    <label for="text">Email</label>
+    <input type="email" id="email" value="carmen@bestmail.com">
+
+    <label for="text">Password</label>
+    <input type="text" id="password" value="123456">
+
+    <label for="text">Role 0 or 1</label>
+    <input type="text" id="role" value="0">
+
+    <button type="submit">Put User</button>  
+  </form>
+
+  <!--GET-->
+  <div class="all">
+    <label for="text">GET: userId</label>
+    <input type="text" id="getUserId" value="6428343c6e54e1eab8e40485">
+    <button id="btnGet">Get User</button>
+  </div>
+
+  <!--DELETE-->
+  <div class="all">
+    <label for="text">DELETE: deleteUserId</label>
+    <input type="text" name="deleteUserId" id="deleteUserId">
+    <button id="btnDelete">Delete User</button>
+  </div>
+
+  <script src="user.js"></script>
+</body>
+
+</html>

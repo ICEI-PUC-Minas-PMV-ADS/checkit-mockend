@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .all {
+      display: flex;
+      flex-flow: column;
+      width: 300px;
+      margin-top: 40px;
+      border: solid 2px black;
+      padding: 10px;
+    }
+  </style>
+  <title>Project</title>
+</head>
+
+<!-- {
+  "title": "string",
+  "createdBy": "string",
+  "updatedBy": "string",
+  "dueDate": "2023-04-29T12:03:56.968Z",
+  "member": [
+    {
+      "id": "string",
+      "name": "string",
+      "password": "string"
+    }
+  ],
+  "status": "string"
+} -->
+
+<body>
+  <!--POST-->
+  <h3>PROJETOS</h3>
+  <form action="" class="all" id="form-post">
+    <label for="text">POST: Form</label>
+    <label for="text">Title</label>
+    <input type="text" id="title" value="Abrir Loja de Roupa">
+
+    <label for="text">CreatedBy</label>
+    <input type="text" id="createdBy" value="Jorge">
+
+    <label for="text">UpdatedBy</label>
+    <input type="text" id="updatedBy" value="Jorge">
+
+    <label for="date">Due Date</label>
+    <input type="datetime-local" name="dueDate" id="dueDate">
+
+    <label for="text">Member</label>
+    <input type="text" id="member" value="Jorge">
+
+    <label for="text">Status</label>
+    <input type="text" id="status" value="Em andamento">
+
+    <button type="submit">Post Project</button>
+  </form>
+
+  <!--PUT-->
+  <form action="" class="all" id="form-put">
+    <label for="text">PUT: Form</label>
+    <label for="text">Id</label>
+    <input type="text" id="idProject" value="644d10e93924155fdfa51171">
+
+    <label for="text">Title</label>
+    <input type="text" id="title" value="Fechar Loja">
+
+    <label for="text">CreatedBy</label>
+    <input type="text" id="createdBy" value="Mateus">
+
+    <label for="text">UpdatedBy</label>
+    <input type="text" id="updatedBy" value="Mateus">
+
+    <label for="date">Due Date</label>
+    <input type="datetime-local" name="dueDate" id="dueDate">
+
+    <label for="text">Member</label>
+    <input type="text" id="member" value="Mateus">
+
+    <label for="text">Status</label>
+    <input type="text" id="status" value="Em andamento">
+
+    <button type="submit">Put Project</button>
+  </form>
+
+  <!--GET-->
+  <div class="all">
+    <label for="text">GET: projectId</label>
+    <input type="text" id="getProjectId">
+    <button id="btnGet">Get Project</button>
+  </div>
+
+  <!--DELETE-->
+  <div class="all">
+    <label for="text">DELETE: deleteProjectId</label>
+    <input type="text" name="deleteProjectId" id="deleteProjectId">
+    <button id="btnDelete">Delete Project</button>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+
+</html>

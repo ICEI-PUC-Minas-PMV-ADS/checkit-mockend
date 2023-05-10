@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .all {
+        display: flex;
+        flex-flow: column;
+        width: 300px;
+        margin-top: 40px;
+        border: solid 2px black;
+        padding: 10px;
+      }
+    </style>
+    <title>Task</title>
+  </head>
+
+  <body>
+    <h3>TASK</h3>
+    <!--POST-->
+    <form action="" class="all" id="form-post">
+      <label for="text">POST: Form</label>
+      <label for="text">ProjetoId</label>
+      <input type="text" class="projetoid" value="64443d4ab155da62b40d64fd" />
+
+      <label for="text">Título</label>
+      <input type="text" class="titulo" value="Comprar Peneira" />
+
+      <label for="text">Descrição</label>
+      <input type="text" class="descricao" value="Para areia" />
+
+      <!-- <label for="text">Inicio</label>
+    <input type="date" name="dateInicio" id="dateInicio"> -->
+      <label for="date">Vencimento</label>
+      <input type="datetime-local" name="dateVenc" id="dateVenc" />
+
+      <label for="number">Prioridade</label>
+      <input type="number" class="prioridade" value="1" />
+
+      <button type="submit">Post Task</button>
+    </form>
+
+    <!--PUT-->
+    <form action="" class="all" id="form-put">
+      <label for="text">PUT: Form</label>
+      <label for="text">Id</label>
+      <input type="text" class="id" value="64443d0709601a8510eb6f5b" />
+
+      <label for="text">ProjetoId</label>
+      <input type="text" class="projetoid" value="644428cfc20e073f29484587" />
+
+      <label for="text">Título</label>
+      <input type="text" class="titulo" value="Comprar Placa Mãe" />
+
+      <label for="text">Descrição</label>
+      <input type="text" class="descricao" value="ASUS" />
+
+      <label for="date">Vencimento</label>
+      <input type="datetime-local" name="dateVenc" id="dateVenc" />
+
+      <label for="number">Prioridade</label>
+      <input type="number" class="prioridade" value="0" />
+
+      <button type="submit">Put Task</button>
+    </form>
+
+    <!--GET-->
+    <div class="all">
+      <label for="text">GET: taskId</label>
+      <input type="text" class="getTaskId" />
+      <button class="btnGet">Get Task</button>
+    </div>
+
+    <!--DELETE-->
+    <div class="all">
+      <label for="text">DELETE: deleteTaskId</label>
+      <input type="text" name="deleteTaskId" class="deleteTaskId" />
+      <button class="btnDelete">Delete Task</button>
+    </div>
+
+    <script src="task.js"></script>
+  </body>
+</html>
