@@ -7,7 +7,7 @@ using Tasks.Models;
 
 namespace ApiGateway.Controllers.TarefasCosntroller
 {
-    /*  [Authorize]*/
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TarefasController : ControllerBase
@@ -23,20 +23,19 @@ namespace ApiGateway.Controllers.TarefasCosntroller
         public async Task<IActionResult> GetTarefaById([FromRoute] string id)
         {
             var result = await _httpClient.GetAsync($"https://localhost:7246/api/Tarefas/{id}");
+            var taskResult = await result.Content.ReadAsStringAsync();
 
-            var convertion = await result.Content.ReadAsStringAsync();
-            //Teste de conversão da string para JSON ser enviado na resposta
-            return Ok(convertion);
+            return taskResult is null ? NotFound() : Ok(taskResult);
         }
 
         [HttpPost()]
         public async Task<IActionResult> PostTarefa([FromBody] Tarefa tarefa)
         {
             var result = await _httpClient.PostAsJsonAsync($"https://localhost:7246/api/Tarefas", tarefa);
- 
+
             return Ok(result);
         }
-        
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTarefa([FromRoute] string id, [FromBody] Tarefa tarefa)
         {
@@ -53,15 +52,10 @@ namespace ApiGateway.Controllers.TarefasCosntroller
             return Ok();
         }
 
-
         [HttpGet("getTaskProject/{id}")]
         public async Task<IActionResult> GetTaskFromProject([FromRoute] string id)
         {
             var result = await _httpClient.GetAsync($"https://localhost:7246/api/tarefas/getTaskProject/{id}");
-            //var a = await result.Content.ReadAsStringAsync();
-
-            // Console.WriteLine(a);
-
 
             return Ok(result);
         }
