@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost/5278',
+  baseURL: 'https://localhost:5278/api',
   timeout: 10000,
 });
 
@@ -11,7 +11,7 @@ export const login = async (email, pass) => {
 };
 
 export const register = async (name, email, pass) => {
-  const response = await api.post('/register', { name, email, pass });
+  const response = await api.post('/Users', { name, email, pass });
   return response.data;
 };
 

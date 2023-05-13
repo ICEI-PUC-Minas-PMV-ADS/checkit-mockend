@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import { register } from "../Services/Api";
 
 export function RegisterForm() {
     const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ export function RegisterForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = await register(name, email, password);
+        const data = await register(name, email, pass);
         console.log(data);
     }
 
@@ -22,7 +23,7 @@ export function RegisterForm() {
                         value={name}
                         name="name"
                         onChange={(e) => setName(e.target.value)}
-                        id="item"
+                        id="name-item"
                         placeholder="full Name" />
                     <label htmlFor="item">Email</label>
                     <input
@@ -30,7 +31,7 @@ export function RegisterForm() {
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         placeholder="youremail@gmail.com"
-                        id="item"
+                        id="email-item"
                         name="email"
                     />
                     <label htmlFor="item">Password</label>
@@ -39,7 +40,7 @@ export function RegisterForm() {
                         onChange={(e) => setPass(e.target.value)}
                         type="password"
                         placeholder="**************"
-                        id="item"
+                        id="pass- item"
                         name="password"
                     />
                 </div>
