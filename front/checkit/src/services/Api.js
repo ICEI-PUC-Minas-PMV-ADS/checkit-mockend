@@ -5,9 +5,10 @@ const api = axios.create({
   //timeout: 10000,
 });
 
-export const login = async (email, pass) => {
-  console.log(email, pass);
-  const response = await api.post("/login", { email, pass });
+export const login = async (email, password) => {
+  console.log(email, password);
+  const response = await api.post("/users/authenticate", { email, password });
+  //console.log(response.data);
   return response.data;
 };
 

@@ -10,10 +10,10 @@ export function LoginForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await login(email, password);
-    localStorage.setItem("token", response.token);
+    const response = await login(email, pass);
+    console.log(response);
+    localStorage.setItem("token", JSON.stringify(response));
     navigate("/");
-    console.log(response.data);
   };
 
   return (
