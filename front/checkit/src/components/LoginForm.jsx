@@ -1,14 +1,20 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
+import { login } from "../Services/Api";
 
 export function LoginForm() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
+        const response = await login(email, password);
+        localStorage.setItem('token', response.token);
+        navigate('/');
+        console.log(response.data);
     }
 
     return (
