@@ -1,15 +1,29 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export function RegisterForm() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
+    const [error, setError] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
-    }
+        try {
+          const response = await axios.post("https://example.com/api/signup", {
+            name,
+            email,
+            password,
+          });
+    
+          localStorage.setItem("token", response.data.token);
+          // handle success
+        } catch (error) {
+          setError(error.response.data.message);
+          // handle error
+        }
+      };
 
     return (
         <>
@@ -41,6 +55,7 @@ export function RegisterForm() {
                         id="item"
                         name="password"
                     />
+                    {error && <div>{error}</div>}
                 </div>
                 <button className="btn" type="submit">Register</button>
             </form>
