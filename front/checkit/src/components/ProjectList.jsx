@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllProjects } from "../services/Api.js";
+// import { getAllProjects } from "../services/Api.js";
 
 
 function ProjectList() {
@@ -14,14 +14,14 @@ function ProjectList() {
   //   ]
 
 
-  useEffect(() => {
-    getAllProjects()
-      .then((res) => {
-        console.log(res);
-        setProjects(res.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   getAllProjects()
+  //     .then((res) => {
+  //       console.log(res);
+  //       setProjects(res);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
 
     return projects;
 }

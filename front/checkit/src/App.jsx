@@ -56,8 +56,9 @@ export default function App() {
 
   return (
     <>
-      <MenuBar />
+      {/* <MenuBar /> */}
       <Router>
+        <MenuBar />
         <Routes>
           <Route path="/" element={< Login />} />
           <Route path="/register" element={< Register />} />
