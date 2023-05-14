@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Checkbox } from "primereact/checkbox";
 
-export default function DynamicDemo({ tasks }) {
+export default function TaskItem({ tasks }) {
   const [selectedTasks, setSelectedTasks] = useState([]);
 
   const onTaskChange = (e) => {
