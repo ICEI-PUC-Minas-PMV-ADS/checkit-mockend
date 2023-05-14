@@ -10,60 +10,61 @@ import CSSGrid from './pages/index.jsx';
 import Login from "./pages/login";
 import Register from "./Pages/Register";
 import ProjectList from "./components/ProjectList";
-
-
-
+import { NewTodoForm } from "./Components/NewTodoForm";
+import MenuBar from "./components/Header";
 
 export default function App() {
 
-  // const [todos, setTodos] = useState(() => {
-  //   const localValue = localStorage.getItem("ITEMS")
-  //   if (localValue == null) return []
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS");
+    if (localValue == null) return [];
 
-  //   return JSON.parse(localValue)
-  // })
+    return JSON.parse(localValue);
+  });
 
-  // useEffect(() => {
-  //   localStorage.setItem("ITEMS", JSON.stringify(todos))
-  // }, [todos])
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(todos));
+  }, [todos]);
 
   // function addTodo(title) {
-  //   setTodos(currentTodos => {
+  //   setTodos((currentTodos) => {
   //     return [
   //       ...currentTodos,
   //       { id: crypto.randomUUID(), title, completed: false },
-  //     ]
-  //   })
+  //     ];
+  //   });
   // }
 
   // function toggleTodo(id, completed) {
-  //   setTodos(currentTodos => {
-  //     return currentTodos.map(todo => {
+  //   setTodos((currentTodos) => {
+  //     return currentTodos.map((todo) => {
   //       if (todo.id === id) {
-  //         return { ...todo, completed }
+  //         return { ...todo, completed };
   //       }
 
-  //       return todo
-  //     })
-  //   })
+  //       return todo;
+  //     });
+  //   });
   // }
 
   // function deleteTodo(id) {
-  //   setTodos(currentTodos => {
-  //     return currentTodos.filter(todo => todo.id !== id)
-  //   })
+  //   setTodos((currentTodos) => {
+  //     return currentTodos.filter((todo) => todo.id !== id);
+  //   });
   // }
 
 
   return (
     <>
+      <MenuBar />
       <Router>
         <Routes>
           <Route path="/" element={< Login />} />
           <Route path="/register" element={< Register />} />
           <Route path="/index"
             element={< CSSGrid />} />
-          <Route path="/teste" element={< ProjectList />} />
+          {/* <Route path="/teste" element={< ProjectList />} /> */}
+          <Route path="/todo" element={< NewTodoForm />} />
         </Routes>
       </Router>
     </>

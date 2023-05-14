@@ -3,10 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../services/Api";
 import { InputText } from "primereact/inputtext";
 import { Button } from 'primereact/button';
-import '../style/login.css'
-
-
-
+import '../style/login.css';
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
@@ -18,7 +15,6 @@ export function LoginForm() {
     e.preventDefault();
     const response = await login(email, pass);
     console.log(response);
-    localStorage.setItem("token", JSON.stringify(response));
     navigate("/");
   };
 
