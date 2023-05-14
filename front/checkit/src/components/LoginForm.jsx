@@ -12,7 +12,6 @@ export function LoginForm() {
     e.preventDefault();
     const response = await login(email, pass);
     console.log(response);
-    localStorage.setItem("token", JSON.stringify(response));
     navigate("/");
   };
 
