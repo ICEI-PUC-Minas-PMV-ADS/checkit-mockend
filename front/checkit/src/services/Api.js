@@ -19,6 +19,11 @@ export const login = async (email, password) => {
   return response.data;
 };
 
+export const getTasksByProjectId = async (projectId) => {
+  const response = await api.get(`/tasks/project/${projectId}`);
+  return response.data;
+};
+
 
 export const register = async (name, email, password, role = 1) => {
   const response = await api.post("/users", { name, email, password, role });
