@@ -20,7 +20,7 @@ export const login = async (email, password) => {
 };
 
 export const getTasksByProjectId = async (projectId) => {
-  const response = await api.get(`/tasks/project/${projectId}`);
+  const response = await api.get(`/api/Tarefas/getTaskProject/${projectId}`);
   return response.data;
 };
 
