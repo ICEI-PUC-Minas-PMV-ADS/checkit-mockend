@@ -8,10 +8,8 @@ import { BsPencil } from "react-icons/bs"
 
 
 
-export default function ProjectCard(props) {
+export default function ProjectCard( {project, selectedTasks, }) {
   const completedTasks = 40
-
-  const { project } = props
 
   const startDate = new Date(project.dueDate);
   const currentDate = new Date();
@@ -38,7 +36,7 @@ export default function ProjectCard(props) {
         <h6 className="h6 text-light mt-1 pt-3">Prazo final em {diffDays} dias</h6>
         <h3 className="p-3 text-light"> {project.title}</h3>
          {/* <p className="px-3 text-justify text-light">{project.descricao}</p> //adicionar "descricao" aqui*/}
-         <ProgressBar className="mt-3 mx-3 progress-bar" style={{ height: '10px' }} value={completedTasks}></ProgressBar>
+         <ProgressBar className="mt-3 mx-3 progress-bar" style={{ height: '10px' }} value={selectedTasks}></ProgressBar>
          {project.tasks &&
             project.tasks.map((task) => (
               <TaskItem  className="text-light" key={task.id} title={task.title} />
