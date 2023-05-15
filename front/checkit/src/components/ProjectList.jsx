@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllProjects, getTaskbyProject } from "../services/Api.js";
+import { getAllProjects, getTasksByProjectId } from "../services/Api.js";
 
 
 function ProjectList() {
@@ -10,7 +10,7 @@ function ProjectList() {
       try {
         const projectResponse = await getAllProjects();
         const projectsWithTasks = await Promise.all(projectResponse.map(async (project) => {
-          const taskResponse = await getTaskbyProject(project.id);
+          const taskResponse = await getTasksByProjectId(project.id);
           return { ...project, tasks: taskResponse };
         }));
         setProjects(projectsWithTasks);
